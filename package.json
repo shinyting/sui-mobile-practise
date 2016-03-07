@@ -1,0 +1,24 @@
+{
+  "name": "sui-mobile-practise",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shinyting/sui-mobile-practise.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shinyting/sui-mobile-practise/issues"
+  },
+  "homepage": "https://github.com/shinyting/sui-mobile-practise#readme",
+  "dependencies": {
+    "consolidate": "^0.14.0",
+    "express": "^4.13.4",
+    "swig": "^1.4.2"
+  }
+}
