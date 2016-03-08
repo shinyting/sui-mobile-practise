@@ -2,7 +2,11 @@ $(function () {
 	$.config = {
 		// router: false
 	}
+
+	//初始化页面，必须执行
 	$.init();
+
+	//下拉刷新
 	$(document).on('refresh', '.pull-to-refresh-content', function (e) {
 		setTimeout(function () {
 			var cardNumber = $(e.target).find('.card').length + 1;
@@ -19,22 +23,31 @@ $(function () {
 		}, 2000);
 	});
 
+	//弹出框
 	$(document).on('click', '.alert', function () {
 		$.alert('here goes alert text', function () {
 			$.alert('button clicked');
 		});
 	});
 
+	//弹出加载图标
 	$(document).on('click', '.open-preloader', function () {
 		$.showPreloader();
 		setTimeout(function () {
 			$.hidePreloader();
 		}, 2000);
 	});
+
+	//弹出带标题的加载图标
 	$(document).on('click', '.open-preloader-title', function () {
 		$.showPreloader('Custom Title');
 		setTimeout(function () {
 			$.hidePreloader();
 		}, 2000);
 	});
+
+	//打开侧边栏
+	$('.panel').on('open', function () {
+		console.log("the panel is opening");
+	})
 }) 
