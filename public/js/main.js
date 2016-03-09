@@ -51,7 +51,30 @@ $(function () {
 		console.log("the panel is opening");
 	});
 
-	$('.toast').on('click', function () {
-		$.toast('right');
+	// $('.showToast').on('showToast', function () {
+	// 	$.toast('right');
+	// });
+
+	//显示toast
+	//必须是这种写法才有效
+	$(document).on('click', '.showToast', function () {
+		$.toast('right right');
+	});
+
+	// 显示popup
+	$(document).on('click', '.create-popup', function () {
+		var popupHTML = '<div class="popup">' +
+							'<div class="content-block">' +
+								'<p>popup created dynamically.</p>' +
+								'<p><a href="#" class="close-popup">close me</a></p>' +
+							'</div>' +
+						'</div>'
+		$.popup(popupHTML);
+	});
+
+	console.log($('input[type="date"]').val());
+	$('.label-switch').on('click', function () {
+		console.log('90');
+		console.log($('.label-switch').find('input')[0].checked);
 	})
 }) 
