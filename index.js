@@ -13,6 +13,12 @@ app.get('/', function (req, res) {
 	});
 });
 
+app.get('/link', function (req, res) {
+	res.render('link', {
+		title: 'home'
+	});
+});
+
 var server = app.listen(8000, function () {
 	var host = server.address().address;
 	var port = server.address().port;

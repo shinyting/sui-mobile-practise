@@ -49,5 +49,9 @@ $(function () {
 	//打开侧边栏
 	$('.panel').on('open', function () {
 		console.log("the panel is opening");
+	});
+
+	$('.toast').on('click', function () {
+		$.toast('right');
 	})
 }) 
