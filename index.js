@@ -15,18 +15,18 @@ app.get('/', function (req, res) {
 });
 
 //阅读时间线
-app.get('/Timeline', function (req, res) {
-	res.render('mine', {});
+app.get('/timeline', function (req, res) {
+	res.render('mineFold/mine', {});
 });
 
 //藏书阁
 app.get('/favorite', function (req, res) {
-	res.render('favorite', {});
+	res.render('FavoriteFold/favorite', {});
 });
 
 //设置
 app.get('/setting', function (req, res) {
-	res.render('setting', {});
+	res.render('setFold/setting', {});
 });
 
 var server = app.listen(8000, function () {
