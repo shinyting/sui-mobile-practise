@@ -7,16 +7,26 @@ app.set('view engine', 'html');
 
 app.set('views', __dirname + '/views');
 
+//首页
 app.get('/', function (req, res) {
 	res.render('index', {
 		title: 'home'
 	});
 });
 
-app.get('/link', function (req, res) {
-	res.render('link', {
-		title: 'home'
-	});
+//阅读时间线
+app.get('/Timeline', function (req, res) {
+	res.render('mine', {});
+});
+
+//藏书阁
+app.get('/favorite', function (req, res) {
+	res.render('favorite', {});
+});
+
+//设置
+app.get('/setting', function (req, res) {
+	res.render('setting', {});
 });
 
 var server = app.listen(8000, function () {
