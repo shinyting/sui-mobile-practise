@@ -1,3 +1,21 @@
+
+/*common style*/
+body,
+.page {
+	background: #fff;
+}
+a {
+	color: #333;
+}
+img {
+	display: block;
+	width: 100%;
+}
+.conmgb {
+	margin-bottom: 2.5rem;
+}
+
+/*reset sm style*/
 .bar-nav {
 	background-color: #00cb64;
 }
@@ -7,3 +25,22 @@
 .title {
 	color: #fff;
 }
+.swiper-container {
+	padding-bottom: 0px;
+}
+.swiper-container-horizontal > .swiper-pagination {
+	bottom: 0px;
+}
+.swiper-pagination-bullet-active {
+	background-color: #facbcb;
+}
+.list-block .item-inner:after {
+	height: 0px;
+}
+.list-block li {
+	border-bottom: 1px solid #e7e7e7;
+}
+.content-block-title {
+	margin-top: 0.75rem;
+}
+
