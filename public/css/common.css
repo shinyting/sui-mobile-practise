@@ -1,0 +1,9 @@
+.bar-nav {
+	background-color: #00cb64;
+}
+.bar-tab .tab-item.active, .bar-tab .tab-item:active {
+	color: #00cb64;
+}
+.title {
+	color: #fff;
+}
