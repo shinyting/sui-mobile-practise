@@ -53,6 +53,9 @@ img {
 	overflow: hidden;
 	white-space: nowrap;
 }
+.gray-color {
+	color: #9b9b9b;
+}
 
 /*reset sm style*/
 header .icon {
