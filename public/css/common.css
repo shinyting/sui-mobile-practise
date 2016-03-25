@@ -26,6 +26,7 @@
 body,
 .page {
 	background: #fff;
+	font-size: 14px;
 }
 a {
 	color: #333;
@@ -47,7 +48,16 @@ img {
 .fs-36 {
 	font-size: 36px;
 }
+.ellipsis {
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
+}
+
 /*reset sm style*/
+header .icon {
+	color: #fff;
+}
 .bar-nav {
 	background-color: #00cb64;
 }
@@ -81,7 +91,6 @@ img {
 
 .add {
 	overflow: hidden;
-	border-bottom: 1px solid #e7e7e7;
 }
 .add .note span{
 	float: left;
@@ -91,4 +100,46 @@ img {
 }
 .add .iconfont {
 	color: #17b8ff;
+}
+
+/*book detail page style*/
+.pic-wrap {
+	position: relative;
+	width: 100%;
+	background: url(../images/bookwrapbig.jpg) repeat-x;
+	background-color: #01c576;
+}
+.pic-wrap img {
+	width: 50%;
+	margin: 0 auto;
+	box-shadow: 1px 0px 10px #999;
+}
+.pic-wrap p {
+	width: 100%;
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+	background: #000;
+	color: #fff;
+	opacity: 0.4;
+	margin: 0px;
+	height: 30px;
+	line-height: 30px;
+	padding: 0px 10px;
+}
+.book-intro p {
+	margin: 0px;
+}
+.book-intro .row {
+	margin-top: 5px;
+}
+.book-title {
+	font-size: 18px;
+	font-weight: bold;
+	color: #444444;
+}
+.sline {
+	border-bottom: 1px solid #e1e1e1;
+	padding: 10px 0px;
+	margin-top: 5px;
 }
