@@ -7,11 +7,20 @@ app.set('view engine', 'html');
 
 app.set('views', __dirname + '/views');
 
+//首页模块
 //首页
 app.get('/', function (req, res) {
 	res.render('index', {
 		title: 'home'
 	});
+});
+//书籍详情页
+app.get('/bookDetail', function (req, res) {
+	res.render('indexFold/book-detail', {});
+});
+//书评
+app.get('/bookReview', function (req, res) {
+	res.render('indexFold/book-review', {});
 });
 
 //阅读时间线
@@ -29,10 +38,7 @@ app.get('/setting', function (req, res) {
 	res.render('setFold/setting', {});
 });
 
-//书籍详情页
-app.get('/bookDetail', function (req, res) {
-	res.render('indexFold/bookDetail', {});
-});
+
 
 var server = app.listen(8000, function () {
 	var host = server.address().address;
