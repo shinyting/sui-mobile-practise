@@ -1,22 +1,9 @@
 <!doctype html>
 <html>
-	<head>
-		<title>sRead详情</title>
-		<meta charset="utf-8">
-		<meta name="viewport" content="initial-scale=1, maximum-scale=1">
-		<meta name="apple-mobile-web-app-capable" content="yes">
-    	<meta name="apple-mobile-web-app-status-bar-style" content="black">
-		<link rel="stylesheet" type="text/css" href="css/sm.css">
-		<link rel="stylesheet" type="text/css" href="css/sm-extend.css">
-		<link rel="stylesheet" type="text/css" href="css/common.css">
-		<script type="text/javascript" src="js/zepto.min.js"></script>
-		<script type="text/javascript" src="js/sm.js"></script>
-		<script type="text/javascript" src="js/sm-extend.js"></script>
-		<script type="text/javascript" src="js/main.js"></script>
-	</head>
+	<head></head>
 	<body>
 		<div class="page-group">
-			<div class="page">
+			<div class="page" id="book-detail-page">
 				<header class="bar bar-nav">
 					<a href="#" class="icon icon-left pull-left back"></a>
 					<h1 class="title">sRead详情</h1>
@@ -28,8 +15,11 @@
 					</div>
 					<div class="content-padded">
 						<div class="book-intro">
-							<div class="book-title">
-								闲话青峰
+							<div class="book-title row">
+								<div class="col-80">闲话青峰</div>
+								<div class="col-20 txt-center" id="addWish">
+									<i class="icon icon-star unstar"></i>
+								</div>
 							</div>
 							<div class="book-author row">
 								<label class="col-20">作者：</label>

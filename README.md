@@ -31,3 +31,12 @@ fetch请求的到，且可以获取到解析json出错的信息
 
 ###图标字体
 css里定义图标字体的时候一定注意字体的路径
+
+###SUI路由
+此实践中定义了四个独立的路由模块  
+每个模块内部使用SUI路由进行页面切换  
+然后就遇到了js不执行的问题  
+解决方法：  
+为每个由SUI路由切换进入的页面添加  
+$(document).on("pageInit", "#book-detail-page", function (e, pageId, $page) {})  
+在function里写这个页面需要执行的js
