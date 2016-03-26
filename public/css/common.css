@@ -104,6 +104,9 @@ header .icon {
 .add .iconfont {
 	color: #17b8ff;
 }
+.toaststyle {
+	background: rgba(0,203,100,0.8);
+}
 
 /*book detail page style*/
 .pic-wrap {
