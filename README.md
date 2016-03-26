@@ -16,9 +16,9 @@ toggle 开关按钮 通过input的checked属性查看状态
 不同的工具栏对应不同的SPA链路的入口
 
 ###创建json文件测试ajax请求
-$.post请求不到tpl下的json文件 
+$.post请求不到tpl下的json文件  
 json文件的格式一定要写正确，否则会出现错误，比如：  
-$.get请求的到，但不执行回调
+$.get请求的到，但不执行回调；  
 fetch请求的到，且可以获取到解析json出错的信息  
 
 ###SUI基本组件使用方法
