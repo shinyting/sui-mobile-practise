@@ -28,3 +28,6 @@ fetch请求的到，且可以获取到解析json出错的信息
    $.toast(msg, staytime, class) eg: $.toast("添加成功", 3000, "success")  
    其中样式需要在样式表中自定义  
 3, popup,
+
+###图标字体
+css里定义图标字体的时候一定注意字体的路径
