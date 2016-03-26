@@ -26,5 +26,5 @@ fetch请求的到，且可以获取到解析json出错的信息
    当页面中有多个轮播图时，data-pagination=".first-pagination"来设置轮播图相对应的分页部分  
 2, 轻量级提示组件toast  
    $.toast(msg, staytime, class) eg: $.toast("添加成功", 3000, "success")  
-   其中样式需要在样式表中自定义
+   其中样式需要在样式表中自定义  
 3, popup,
