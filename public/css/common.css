@@ -72,6 +72,21 @@ img {
 .nobor {
 	border: none !important;
 }
+.mgt0 {
+	margin-top: 0px !important;
+}
+.mini-btn {
+	border: 1px solid #ddd;
+	padding: 5px 15px;
+	border-radius: 5px;
+}
+.mini-btn.mini-btn-red {
+	border-color: #e03c44;
+}
+.mini-btn.mini-btn-green {
+	border-color: #00cc7d;
+}
+
 
 /*reset sm style*/
 header .icon {
@@ -203,4 +218,19 @@ header .icon {
 .preview-list img {
 	width: 100%;
 	border-radius: 30px;
+}
+
+/*myread page style*/
+.myread-tab {
+	background: #1d2122;
+}
+.myread-tab .button {
+	color: #aeb3b8;
+}
+.myread-tab .button.active {
+	color: #fff;
+	border-color: #009867;
+}
+.myread-tab-content .list-block .item-text {
+	line-height: 2.05rem;
 }
