@@ -134,7 +134,7 @@ li {
 }
 .mini-btn {
 	border: 1px solid #ddd;
-	padding: 5px 15px;
+	padding: 5px 10px;
 	border-radius: 5px;
 }
 .mini-btn.mini-btn-red {
@@ -142,6 +142,10 @@ li {
 }
 .mini-btn.mini-btn-green {
 	border-color: #00cc7d;
+}
+.mini-btn.mini-btn-green-fill {
+	background: #00cc7d;
+	color: #fff;
 }
 
 
@@ -297,7 +301,6 @@ header .icon {
 	margin-bottom: 10px;
 }
 .sort-title {
-	border-left: 2px solid #a3602c;
 	padding-left: 10px;
 	padding-right: 10px;
 	margin-bottom: 10px;

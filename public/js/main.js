@@ -77,4 +77,35 @@ $(function () {
 	$(document).on("pageInit", "#book-review-page", function (e, pageId, $page) {
 		console.log(pageId);
 	});
+
+	// timeline mine page
+	function myPageHandler () {
+		$('.go-comment').on('click', function () {
+			$.router.load("/bookReview");
+		});
+		$('.add-favorite').on('click', function () {
+			var params = {}, bookId, bookName, bookAuthor, ebox, curElement;
+			curElement = $(this);
+			if ($(curElement).hasClass("mini-btn-green-fill")) {
+				return;
+			}
+			ebox = $(this).parents(".item-content");
+			bookId = $(ebox).attr("data-id");
+			bookName = $(ebox).find('.item-title').html();
+			bookAuthor = $(ebox).find('.item-subtitle').html();
+			params.bookId = bookId;
+			params.bookName = bookName;
+			params.bookAuthor = bookAuthor;
+			$.post("http://192.168.1.232:3000/collect", params, function (res) {
+				$.toast("成功加入收藏阁", 2000, "greentoast");
+				$(curElement).html("已入收藏阁");
+				$(curElement).addClass("mini-btn-green-fill");
+			});
+		});
+	}
+	myPageHandler();
+	$(document).on("pageInit", "#mine", function (e, pageId, $page) {
+		console.log(pageId);
+		myPageHandler();
+	});
 }) 
