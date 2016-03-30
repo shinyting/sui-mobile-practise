@@ -1,11 +1,12 @@
 
 /*common style*/
-@font-face {font-family: "iconfont";
-  src: url('../font/iconfont.eot?t=1458888477'); /* IE9*/
-  src: url('../font/iconfont.eot?t=1458888477#iefix') format('embedded-opentype'), /* IE6-IE8 */
-  url('../font/iconfont.woff?t=1458888477') format('woff'), /* chrome, firefox */
-  url('../font/iconfont.ttf?t=1458888477') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
-  url('../font/iconfont.svg?t=1458888477#iconfont') format('svg'); /* iOS 4.1- */
+@font-face {
+	font-family: "iconfont";
+    src: url('../font/iconfont.eot?t=1458888477'); /* IE9*/
+    src: url('../font/iconfont.eot?t=1458888477#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('../font/iconfont.woff?t=1458888477') format('woff'), /* chrome, firefox */
+    url('../font/iconfont.ttf?t=1458888477') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+    url('../font/iconfont.svg?t=1458888477#iconfont') format('svg'); /* iOS 4.1- */
 }
 .iconfont {
   font-family:"iconfont" !important;
@@ -29,6 +30,40 @@
 .icon-2301:before { content: "\e6c0"; }
 /*感叹号实心*/
 .icon-2501:before { content: "\e6c2"; }
+
+@font-face {
+	font-family: "iconfont01";
+	src: url('../font/iconfont01.eot?t=1459323337'); /* IE9*/
+    src: url('../font/iconfont01.eot?t=1459323337#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('../font/iconfont01.woff?t=1459323337') format('woff'), /* chrome, firefox */
+    url('../font/iconfont01.ttf?t=1459323337') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+    url('../font/iconfont01.svg?t=1459323337#iconfont') format('svg'); /* iOS 4.1- */
+}
+.iconfont01 {
+	font-family:"iconfont01" !important;
+    font-size:16px;
+    font-style:normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;
+}
+.icon-gengduomore11:before { content: "\e761"; }
+.icon-gengduomore10:before { content: "\e760"; }
+.icon-gengduomore12:before { content: "\e762"; }
+.icon-gengduomore13:before { content: "\e763"; }
+.icon-heisedeblack381:before { content: "\e746"; }
+.icon-yuanxingdecircular231:before { content: "\e738"; }
+.icon-yuedureading19:before { content: "\e73a"; }
+.icon-zhanweifuplaceholder19:before { content: "\e73c"; }
+.icon-zhanweifuplaceholder20:before { content: "\e73d"; }
+.icon-xunhuanrecycle64:before { content: "\e729"; }
+.icon-huishourecycling11:before { content: "\e74d"; }
+.icon-tushuguanlibrary12:before { content: "\e701"; }
+.icon-kongbaiblank28:before { content: "\e696"; }
+.icon-biaoqianlabel22:before { content: "\e61e"; }
+.icon-biaoqianlabel24:before { content: "\e620"; }
+.icon-yuanxingdecircular230:before { content: "\e737"; }
+.icon-yuanxingdecircular232:before { content: "\e739"; }
 
 
 * {
@@ -90,6 +125,9 @@ li {
 }
 .mgt0 {
 	margin-top: 0px !important;
+}
+.mgr5 {
+	margin-right: 5px;
 }
 .mgbnav {
 	margin-bottom: 3.5rem !important;
@@ -241,14 +279,14 @@ header .icon {
 
 /*myread page style*/
 .myread-tab {
-	background: #1d2122;
+	background: #357adf;
 }
 .myread-tab .button {
 	color: #aeb3b8;
 }
 .myread-tab .button.active {
 	color: #fff;
-	border-color: #009867;
+	border-color: #00cb64;
 }
 .myread-tab-content .list-block .item-text {
 	line-height: 2.05rem;
@@ -307,6 +345,7 @@ header .icon {
 	border: 1px solid #00ca79;
 	background: rgba(0, 202, 121, 0.3);
 	padding: 2px;
+	box-shadow: 1px 1px 1px #eee;
 }
 .infopic img {
 	width: 100%;
@@ -317,6 +356,9 @@ header .icon {
 	font-size: 12px;
 }
 .ac-item {
-	height: 30px;
 	line-height: 30px;
+}
+.achieve-detail {
+	margin-top: 10px;
+	border-top: 1px solid #cecfcf;
 }
