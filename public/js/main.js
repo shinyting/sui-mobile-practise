@@ -9,7 +9,7 @@ $(function () {
 
 	function saveNote () {
 		//表单校验
-		var nName, nAuthor, nStyle, nSum;
+		var nName, nAuthor, nStyle, nSum, params = {};
 		nName = $('#nName').val();
 		nAuthor = $('#nAuthor').val();
 		nStyle = $('#nStyle').val();
@@ -18,10 +18,18 @@ $(function () {
 			$.toast("信息要填写完整哦...", 2000, "redtoast");
 			return;
 		}
-		$.get("../tpl/save-note.json", function (res) {
+		// $.get("../tpl/save-note.json", function (res) {
+		// 	$.toast(res.msg, 2000, "greentoast");
+		// 	$.closeModal('.popup-newnote');
+		// });
+
+		params.name = "make";
+		params.owner = "john";
+		$.get("http://192.168.1.232:3000/posts", function (res) {
 			$.toast(res.msg, 2000, "greentoast");
 			$.closeModal('.popup-newnote');
 		});
+		
 		//使用fetch方法请求数据
 		// fetch("tpl/save-note.json").then(function (res) {
 		// 	return res.json()
