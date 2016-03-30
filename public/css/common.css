@@ -78,6 +78,13 @@ li {
 .lite-gray-bg {
 	background: #eeeeee;
 }
+.green-bg {
+	background: #00ca7c;
+}
+.stress {
+	color: #981012;
+	font-weight: bold;
+}
 .nobor {
 	border: none !important;
 }
@@ -85,7 +92,7 @@ li {
 	margin-top: 0px !important;
 }
 .mgbnav {
-	margin-bottom: 3.5rem;
+	margin-bottom: 3.5rem !important;
 }
 .mini-btn {
 	border: 1px solid #ddd;
@@ -288,4 +295,28 @@ header .icon {
 }
 .sort-content p.gray-color {
 	font-size: 12px;
+}
+
+/*setting page style*/
+.infopic {
+	width: 100px;
+	height: 100px;
+	border-radius: 50px;
+	overflow: hidden;
+	margin: 30px auto 0px auto;
+	border: 1px solid #00ca79;
+	background: rgba(0, 202, 121, 0.3);
+	padding: 2px;
+}
+.infopic img {
+	width: 100%;
+	border-radius: 50px;
+}
+.activity .weak {
+	color: #9b9b9b;
+	font-size: 12px;
+}
+.ac-item {
+	height: 30px;
+	line-height: 30px;
 }
