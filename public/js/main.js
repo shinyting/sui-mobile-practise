@@ -61,13 +61,13 @@ $(function () {
 			if ($(starIcon).hasClass('unstar')) {
 				$(starIcon).removeClass('unstar');
 				$.get("../tpl/save-note.json", function (res) {
-					$.toast("成功添加到阅读列表", 2000, "greentoast");
+					$.toast("成功添加到收藏列表", 2000, "greentoast");
 				});
 			}
 			else {
 				$(starIcon).addClass('unstar');
 				$.get("../tpl/save-note.json", function (res) {
-					$.toast("成功从阅读列表移除本书", 2000, "greentoast");
+					$.toast("成功从收藏列表移除本书", 2000, "greentoast");
 				});
 			}
 		});

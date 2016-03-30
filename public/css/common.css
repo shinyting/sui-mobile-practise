@@ -30,6 +30,11 @@
 /*感叹号实心*/
 .icon-2501:before { content: "\e6c2"; }
 
+
+* {
+	margin: 0px;
+	padding: 0px;
+}
 body,
 .page {
 	background: #fff;
@@ -41,6 +46,10 @@ a {
 img {
 	display: block;
 	width: 100%;
+}
+ul,
+li {
+	list-style-type: none;
 }
 .conmgb {
 	margin-bottom: 2.5rem;
@@ -74,6 +83,9 @@ img {
 }
 .mgt0 {
 	margin-top: 0px !important;
+}
+.mgbnav {
+	margin-bottom: 3.5rem;
 }
 .mini-btn {
 	border: 1px solid #ddd;
@@ -233,4 +245,47 @@ header .icon {
 }
 .myread-tab-content .list-block .item-text {
 	line-height: 2.05rem;
+}
+
+/*favorite page style*/
+.sort {
+	margin-bottom: 10px;
+}
+.sort-title {
+	border-left: 2px solid #a3602c;
+	padding-left: 10px;
+	padding-right: 10px;
+	margin-bottom: 10px;
+	height: 30px;
+	line-height: 30px;
+	background: #d8a957;
+	color: #fff;
+}
+.sort-title a {
+	color: #fff;
+}
+.sort-title .icon-right {
+	font-size: 12px;
+}
+.sort-content {
+	padding: 0px 10px;
+}
+.sort-content li {
+	float: left;
+}
+.sort-content li>a {
+	display: block;
+}
+.sort-content p {
+	margin: 3px 0px;
+	text-align: center;
+}
+.sort-pic {
+	border: 1px solid #d4d4d4;
+}
+.sort-pic img {
+	width: 100%;
+}
+.sort-content p.gray-color {
+	font-size: 12px;
 }
