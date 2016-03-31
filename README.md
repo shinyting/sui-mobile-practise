@@ -40,3 +40,8 @@ css里定义图标字体的时候一定注意字体的路径
 为每个由SUI路由切换进入的页面添加  
 $(document).on("pageInit", "#book-detail-page", function (e, pageId, $page) {})  
 在function里写这个页面需要执行的js
+
+###使用json-server搭建rest api服务器
+在public目录下创建tpl/db.json, json-server public/tpl/db.json, 启动服务  
+db.json创建booklist属性存储阅读记录  
+

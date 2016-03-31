@@ -1,33 +1,22 @@
 {
-  "posts": {
-    "list": [
-      {
-        "id": 1,
-        "title": "json-server",
-        "author": "typicode"
-      },
-      {
-        "id": 2
-      },
-      {
-        "name": "make",
-        "owner": "john",
-        "id": 3
-      }
-    ],
-    "msg": "success"
-  },
-  "comments": [
+  "bookList": [
     {
-      "id": 1,
-      "body": "some comment",
-      "postId": 1
+      "bookName": "我们都是和自己赛跑的人",
+      "bookAuthor": "另维",
+      "bookType": "成长 文学励志",
+      "bookComment": "“每个人都有这样的孤独时光吧，走过时疲累，走过后感激，是它们使生命充满希望。” 《我们都是和自己赛跑的人》是一部年轻人写给年轻人的励志故事集。",
+      "bookLike": "true",
+      "bookStatus": "想读",
+      "id": 1
+    },
+    {
+      "bookName": "若非此时，何时？",
+      "bookAuthor": " [意大利] 普里莫·莱维",
+      "bookType": "外国文学",
+      "bookComment": "为我们谱写了一曲关于人类精神的力量和才智的颂歌。",
+      "bookLike": "true",
+      "bookStatus": "已读",
+      "id": 2
     }
-  ],
-  "profile": {
-    "name": "typicode"
-  },
-  "collect": [
-    
   ]
 }

@@ -9,27 +9,29 @@ $(function () {
 
 	function saveNote () {
 		//表单校验
-		var nName, nAuthor, nStyle, nSum, params = {};
+		var nName, nAuthor, nStyle, nSum, nLike, nStatus, params = {};
 		nName = $('#nName').val();
 		nAuthor = $('#nAuthor').val();
 		nStyle = $('#nStyle').val();
 		nSum = $('#nSum').val();
+		nLike = $('#nLike').checked;
+		nStatus = $('.status-group span.choosen').html();
 		if (!nName || !nAuthor || !nStyle || !nSum) {
 			$.toast("信息要填写完整哦...", 2000, "redtoast");
 			return;
 		}
-		// $.get("../tpl/save-note.json", function (res) {
-		// 	$.toast(res.msg, 2000, "greentoast");
-		// 	$.closeModal('.popup-newnote');
-		// });
-
-		params.name = "make";
-		params.owner = "john";
-		$.get("http://192.168.1.232:3000/posts", function (res) {
-			$.toast(res.msg, 2000, "greentoast");
-			$.closeModal('.popup-newnote');
+		params.bookName = nName;
+		params.bookAuthor = nAuthor;
+		params.bookType = nStyle;
+		params.bookComment = nSum;
+		params.bookLike = nLike;
+		params.bookStatus = nStatus;
+		$.post("http://192.168.1.232:3000/bookList", params, function (res) {
+			if (res) {
+				$.toast("添加成功", 2000, "greentoast");
+				$.closeModal(".popup-newnote");
+			}
 		});
-		
 		//使用fetch方法请求数据
 		// fetch("tpl/save-note.json").then(function (res) {
 		// 	return res.json()
@@ -40,9 +42,16 @@ $(function () {
 		// });
 	}
 
+	function setStatus () {
+		$(this).addClass("choosen");
+		$(this).siblings().removeClass("choosen");
+	}
+
 	//首页初始化
 	//确定添加阅读记录
 	$('.save-note').on('click', saveNote);
+	//添加阅读记录弹层设置阅读状态效果
+	$('.status-group span').on('click', setStatus);
 
 	//index page
 	$(document).on("pageInit", "#index", function (e, pageId, $page) {
@@ -50,6 +59,8 @@ $(function () {
 		//首页由SUI路由进入的情况
 		//确定添加阅读记录
 		$('.save-note').on('click', saveNote);
+		//添加阅读记录弹层设置阅读状态效果
+		$('.status-group span').on('click', setStatus);
 	});
 
 	//book-detail-page
