@@ -9,14 +9,15 @@ $(function () {
 
 	function saveNote () {
 		//表单校验
-		var nName, nAuthor, nStyle, nSum, nLike, nStatus, params = {};
+		var nName, nAuthor, nStyle, nSum, nImg, nLike, nStatus, params = {};
 		nName = $('#nName').val();
 		nAuthor = $('#nAuthor').val();
 		nStyle = $('#nStyle').val();
 		nSum = $('#nSum').val();
-		nLike = $('#nLike').checked;
+		nImg = $('#nImg').val();
+		nLike = $('#nLike')[0].checked;
 		nStatus = $('.status-group span.choosen').html();
-		if (!nName || !nAuthor || !nStyle || !nSum) {
+		if (!nName || !nAuthor || !nStyle || !nSum || !nImg) {
 			$.toast("信息要填写完整哦...", 2000, "redtoast");
 			return;
 		}
@@ -24,6 +25,7 @@ $(function () {
 		params.bookAuthor = nAuthor;
 		params.bookType = nStyle;
 		params.bookComment = nSum;
+		params.bookimg = "images/pic/" + nImg;
 		params.bookLike = nLike;
 		params.bookStatus = nStatus;
 		$.post("http://192.168.1.232:3000/bookList", params, function (res) {

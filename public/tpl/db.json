@@ -7,6 +7,7 @@
       "bookComment": "“每个人都有这样的孤独时光吧，走过时疲累，走过后感激，是它们使生命充满希望。” 《我们都是和自己赛跑的人》是一部年轻人写给年轻人的励志故事集。",
       "bookLike": "true",
       "bookStatus": "想读",
+      "bookimg": "images/pic/booklist01.jpg",
       "id": 1
     },
     {
@@ -16,7 +17,18 @@
       "bookComment": "为我们谱写了一曲关于人类精神的力量和才智的颂歌。",
       "bookLike": "true",
       "bookStatus": "已读",
+      "bookimg": "images/pic/booklist02.jpg",
       "id": 2
+    },
+    {
+      "bookName": "宇宙再大大不过我和你",
+      "bookAuthor": "大橘子",
+      "bookType": "绘本",
+      "bookComment": "一座随时为你开门的20毫米美术馆",
+      "bookLike": "false",
+      "bookStatus": "想读",
+      "bookimg": "images/pic/booklist03.jpg",
+      "id": 3
     }
   ]
 }
