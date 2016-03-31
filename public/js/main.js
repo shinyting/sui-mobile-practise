@@ -138,25 +138,30 @@ $(function () {
 
 	// favorite page get bookList
 	function getLike () {
-		//booklist中的所有类型
+		//booklist中的所有like的藏书类型
 		var typeArray = [];
 		//去重后的type集合
 		var types;
 		var content = "";
 		$.get("http://192.168.1.232:3000/bookList", function (res) {
 			for (var i = 0; i < res.length; i ++) {
-				typeArray.push(res[i].bookType);
+				//只获取like为true的图书
+				if (res[i].bookLike) {
+					typeArray.push(res[i].bookType);
+				}
 			}
 			types = typeArray.unique();
 			for (var j = 0; j < types.length; j ++) {
 				types[j] = {type: types[j], data:[]};
 				for (var k = 0; k < res.length; k ++) {
 					if (types[j].type == res[k].bookType) {
-						types[j].data.push(res[k]);
+						//只获取like为true的图书
+						if (res[k].bookLike) {
+							types[j].data.push(res[k]);
+						}
 					}
 				}
 			}
-			console.log(types);
 			for (var v = 0; v < types.length; v ++) {
 				content += "<div class='sort'>" +
 								"<div class='sort-title clearfix'>" +
