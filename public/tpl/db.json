@@ -3,9 +3,9 @@
     {
       "bookName": "我们都是和自己赛跑的人",
       "bookAuthor": "另维",
-      "bookType": "成长 文学励志",
+      "bookType": "文学",
       "bookComment": "“每个人都有这样的孤独时光吧，走过时疲累，走过后感激，是它们使生命充满希望。” 《我们都是和自己赛跑的人》是一部年轻人写给年轻人的励志故事集。",
-      "bookLike": "true",
+      "bookLike": true,
       "bookStatus": "想读",
       "bookimg": "images/pic/booklist01.jpg",
       "id": 1
@@ -15,7 +15,7 @@
       "bookAuthor": " [意大利] 普里莫·莱维",
       "bookType": "外国文学",
       "bookComment": "为我们谱写了一曲关于人类精神的力量和才智的颂歌。",
-      "bookLike": "true",
+      "bookLike": true,
       "bookStatus": "已读",
       "bookimg": "images/pic/booklist02.jpg",
       "id": 2
@@ -25,10 +25,20 @@
       "bookAuthor": "大橘子",
       "bookType": "绘本",
       "bookComment": "一座随时为你开门的20毫米美术馆",
-      "bookLike": "false",
+      "bookLike": false,
       "bookStatus": "想读",
       "bookimg": "images/pic/booklist03.jpg",
       "id": 3
+    },
+    {
+      "bookName": "眼前",
+      "bookAuthor": "唐诺",
+      "bookType": "文学",
+      "bookComment": "像是安排一趟远行，设定的目标是《左传》，想办法在那里生活一整年，不一样的人，不一样的话语，不一样的周遭世界及其经常处境，不一样的忧烦和希望……远游回来，就是这本《眼前》了",
+      "bookimg": "images/pic/booklist04.jpg",
+      "bookLike": false,
+      "bookStatus": "正在读",
+      "id": 4
     }
   ]
 }

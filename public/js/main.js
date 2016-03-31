@@ -2,11 +2,23 @@ $(function () {
 	//初始化页面，必须执行
 	$.init();
 
+	//数组去重
+	Array.prototype.unique = function () {
+		var n = [];
+		for (var i = 0; i < this.length; i ++) {
+			if (n.indexOf(this[i]) == -1) {
+				n.push(this[i]);
+			}
+		}
+		return n;
+	}
+
 	//添加阅读记录弹出层效果
 	$(document).on('click', '.open-newnote', function () {
 		$.popup('.popup-newnote');
 	});
 
+	//添加阅读记录
 	function saveNote () {
 		//表单校验
 		var nName, nAuthor, nStyle, nSum, nImg, nLike, nStatus, params = {};
@@ -28,6 +40,7 @@ $(function () {
 		params.bookimg = "images/pic/" + nImg;
 		params.bookLike = nLike;
 		params.bookStatus = nStatus;
+		//将阅读记录添加到booklist
 		$.post("http://192.168.1.232:3000/bookList", params, function (res) {
 			if (res) {
 				$.toast("添加成功", 2000, "greentoast");
@@ -44,6 +57,7 @@ $(function () {
 		// });
 	}
 
+	//设置点击选中状态
 	function setStatus () {
 		$(this).addClass("choosen");
 		$(this).siblings().removeClass("choosen");
@@ -120,5 +134,63 @@ $(function () {
 	$(document).on("pageInit", "#mine", function (e, pageId, $page) {
 		console.log(pageId);
 		myPageHandler();
+	});
+
+	// favorite page get bookList
+	function getLike () {
+		//booklist中的所有类型
+		var typeArray = [];
+		//去重后的type集合
+		var types;
+		var content = "";
+		$.get("http://192.168.1.232:3000/bookList", function (res) {
+			for (var i = 0; i < res.length; i ++) {
+				typeArray.push(res[i].bookType);
+			}
+			types = typeArray.unique();
+			for (var j = 0; j < types.length; j ++) {
+				types[j] = {type: types[j], data:[]};
+				for (var k = 0; k < res.length; k ++) {
+					if (types[j].type == res[k].bookType) {
+						types[j].data.push(res[k]);
+					}
+				}
+			}
+			console.log(types);
+			for (var v = 0; v < types.length; v ++) {
+				content += "<div class='sort'>" +
+								"<div class='sort-title clearfix'>" +
+									"<div class='pull-left'>" +
+										"<i class='iconfont01 icon-tushuguanlibrary12 mgr5'></i>" +
+										types[v].type +
+									"</div>" +
+									"<div class='pull-right'>" +
+										"<a href='#'>更多<span class='iconfont01 icon-gengduomore11'></span></a>" +
+									"</div>" +
+								"</div>" +
+								"<div class='sort-content'>" +
+									"<ul class='clearfix row'>";
+				for (var s = 0; s < types[v].data.length; s ++) {
+					content += "<li class='col-25'>" +
+									"<a href='#'>" +
+										"<div class='sort-pic'>" +
+											"<img src='" + types[v].data[s].bookimg + "' />" +
+										"</div>" +
+										"<div class='sort-name'>" +
+											"<p>" + types[v].data[s].bookName + "</p>" +
+											"<p class='gray-color'>" + types[v].data[s].bookAuthor + "</p>" +
+										"</div>" +
+									"</a>" +
+								"</li>";
+				}
+				content += "</ul></div></div>";
+			}
+			$('#favorite-data').html(content);
+		});
+	}
+	getLike();
+	$(document).on("pageInit", "#favorite", function (e, pageId, $page) {
+		console.log(pageId);
+		getLike();
 	});
 }) 

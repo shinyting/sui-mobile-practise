@@ -338,10 +338,14 @@ header .icon {
 	text-align: center;
 }
 .sort-pic {
-	border: 1px solid #d4d4d4;
+	height: 5.5rem;
+	position: relative;
 }
 .sort-pic img {
 	width: 100%;
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
 }
 .sort-content p.gray-color {
 	font-size: 12px;
