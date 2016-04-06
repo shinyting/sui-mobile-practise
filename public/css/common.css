@@ -378,3 +378,13 @@ header .icon {
 	margin-top: 10px;
 	border-top: 1px solid #cecfcf;
 }
+
+/*make arrow*/
+.marrow {
+	width: 20px;
+	height: 20px;
+	border-width: 1px 1px 0 0;
+	border-color: #333;
+	border-style: solid;
+	transform: rotate(45deg);
+}
